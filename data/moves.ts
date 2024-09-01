@@ -34,7 +34,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		contestType: "Clever",
 	},
 	aa: {
-		num: 71,
+		num: 721,
 		accuracy: 100,
 		basePower: 99999999,
 		category: "Special",
