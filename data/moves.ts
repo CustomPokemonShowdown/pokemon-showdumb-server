@@ -10157,7 +10157,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		accuracy: 100,
 		basePower: 600,
 		category: "Physical",
-		name: "Jettison Punch",
+		name: "Jet Punch",
 		pp: 15,
 		priority: 3,
 		flags: {mirror: 1, punch: 1},
