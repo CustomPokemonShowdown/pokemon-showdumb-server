@@ -15746,7 +15746,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	runerigus: {
 		num: 867,
 		name: "Runerigus",
-		types: ["Ground", "Ghost"],
+		types: ["Rock", "Ghost"],
 		baseStats: {hp: 58, atk: 95, def: 145, spa: 50, spd: 105, spe: 30},
 		abilities: {0: "Wandering Spirit"},
 		heightm: 1.6,
