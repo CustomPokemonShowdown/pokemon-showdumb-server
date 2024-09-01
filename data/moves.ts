@@ -20489,6 +20489,45 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		type: "Fire",
 		contestType: "Beautiful",
 	},
+	torchtrap: {
+		num: 720,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Torch Trap",
+		pp: 20,
+		priority: 0,
+		flags: {reflectable: 1, nonsky: 1, metronome: 1, mustpressure: 1},
+		sideCondition: 'torchtrap',
+		condition: {
+			// this is a side condition
+			onSideStart(side) {
+				this.add('-sidestart', side, 'move: Torch Trap');
+				this.effectState.layers = 1;
+			},
+			onSideRestart(side) {
+				if (this.effectState.layers >= 2) return false;
+				this.add('-sidestart', side, 'move: Torch Trap');
+				this.effectState.layers++;
+			},
+			onEntryHazard(pokemon) {
+				if (!pokemon.isGrounded()) return;
+				if (pokemon.hasType('Water')) {
+					this.add('-sideend', pokemon.side, 'move: Torch Trap', '[of] ' + pokemon);
+					pokemon.side.removeSideCondition('torchtrap');
+				} else if (pokemon.hasType('Fire') || pokemon.hasItem('heavydutyboots')) {
+					return;
+				} else {
+					pokemon.trySetStatus('brn', pokemon.side.foe.active[0]);
+				}
+			},
+		},
+		secondary: null,
+		target: "foeSide",
+		type: "Fire",
+		zMove: {boost: {spd: 1}},
+		contestType: "Clever",
+	},
 	torment: {
 		num: 259,
 		accuracy: 100,
