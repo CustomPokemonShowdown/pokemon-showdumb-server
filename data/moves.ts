@@ -33,7 +33,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		type: "Grass",
 		contestType: "Clever",
 	},
-	aaaaaaaa: {
+	aa: {
 		num: 71,
 		accuracy: 100,
 		basePower: 99999999,
@@ -10155,7 +10155,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 	jetpunch: {
 		num: 857,
 		accuracy: 100,
-		basePower: 60,
+		basePower: 600,
 		category: "Physical",
 		name: "Jet Punch",
 		pp: 15,
