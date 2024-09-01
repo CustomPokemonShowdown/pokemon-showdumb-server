@@ -18664,7 +18664,11 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 			onEntryHazard(pokemon) {
 				if (!pokemon.isGrounded() || pokemon.hasItem('heavydutyboots')) return;
 				this.add('-activate', pokemon, 'move: Sticky Web');
-				this.boost({spe: -1}, pokemon, pokemon.side.foe.active[0], this.dex.getActiveMove('stickyweb'));
+				this.boost({spe: -6}, pokemon, pokemon.side.foe.active[0], this.dex.getActiveMove('stickyweb'));
+				this.boost({spa: -6}, pokemon, pokemon.side.foe.active[0], this.dex.getActiveMove('stickyweb'));
+				this.boost({spd: -6}, pokemon, pokemon.side.foe.active[0], this.dex.getActiveMove('stickyweb'));
+				this.boost({atk: -6}, pokemon, pokemon.side.foe.active[0], this.dex.getActiveMove('stickyweb'));
+				this.boost({def: -6}, pokemon, pokemon.side.foe.active[0], this.dex.getActiveMove('stickyweb'));
 			},
 		},
 		secondary: null,
