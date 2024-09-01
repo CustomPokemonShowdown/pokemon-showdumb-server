@@ -38,7 +38,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		accuracy: 100,
 		basePower: 99999999,
 		category: "Special",
-		name: "Aaaaaaaaaah",
+		name: "Aaah",
 		pp: 2,
 		priority: 3,
 		flags: {nosketch: 1, bypasssub: 1, failcopycat: 1, failinstruct: 1, failmimic: 1, reflectable:1},
